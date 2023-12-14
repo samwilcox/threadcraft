@@ -11,11 +11,15 @@
  * https://license.threadcraft.com
  */
 
-$items = ['Name' => 'Wilcox', 'Age' => 42, 'Sex' => 'Male'];
-
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-echo json_encode($items);
+// error_reporting( E_ALL );
+// ini_set( 'display_errors', true );
+error_reporting( 0 );
+
+define('ROOT_PATH', dirname(__FILE__) . '/');
+
+require_once (ROOT_PATH . 'application/ThreadCraft.php');
+\ThreadCraft\Application::run();
