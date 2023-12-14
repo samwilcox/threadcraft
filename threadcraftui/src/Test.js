@@ -4,7 +4,7 @@ function Test() {
     useEffect(() => {
         const fetchData = async() => {
             try {
-                let response = await fetch('http://localhost:8080/sam', {
+                let response = await fetch('http://tc.com/index.php', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ function Test() {
                 console.log("Errored out:", error);
             }
         };
-
+        
         fetchData();
     }, []);
 
